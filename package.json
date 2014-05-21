@@ -1,7 +1,7 @@
 {
   "name": "grunt-dot-compiler",
   "description": "Grunt task for compiling doT templates",
-  "version": "0.5.12+1",
+  "version": "0.5.12+2",
   "homepage": "https://github.com/tinganho/grunt-dot",
   "author": {
     "name": "Tingan Ho",
@@ -38,7 +38,8 @@
     "grunt": "~0.4.1",
     "findup-sync": "~0.1.2",
     "requirejs": "~2.1.5",
-    "escape-html": "~1.0.0"
+    "escape-html": "~1.0.0",
+	"lodash": "^2.4.1"
   },
   "devDependencies": {
     "grunt-contrib-clean": "~0.3.1",

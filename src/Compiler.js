@@ -3,7 +3,7 @@
  */
 
 var grunt = require('grunt')
-  , _     = grunt.util._
+  , _     = require('lodash')
   , path  = require('path')
   , fs    = require('fs')
   , doT   = require('dot')
@@ -158,8 +158,8 @@ Compiler.prototype.compileTemplates = function(files) {
   // tepez: created a fork just for this because owner won't incoporate this
   // https://github.com/tinganho/grunt-dot-compiler/pull/14
   if (this.opt.templateSettings != null) {
-    doT.templateSetting = grunt.util._.extend(
-      grunt.util._.cloneDeep(doT.templateSettings),
+    _.extend(
+      doT.templateSettings,
       this.opt.templateSettings
     );
   }
