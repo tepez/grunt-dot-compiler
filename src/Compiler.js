@@ -154,6 +154,16 @@ Compiler.prototype.compileTemplates = function(files) {
 
   var js = '', _this = this;
   
+  // load custom dot settings
+  // tepez: created a fork just for this because owner won't incoporate this
+  // https://github.com/tinganho/grunt-dot-compiler/pull/14
+  if (this.opt.templateSettings != null) {
+    doT.templateSetting = grunt.util._.extend(
+      grunt.util._.cloneDeep(doT.templateSettings),
+      this.opt.templateSettings
+    );
+  }
+  
 
   // RequireJS
   if(!this.opt.requirejs && !this.opt.node) {
